@@ -13,6 +13,9 @@ with right:
     st.image("assets/b553.png", use_container_width=True)
 
 
+db_user = st.secrets["DB_USER"]
+st.write(db_user)
+
 
 
 
