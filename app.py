@@ -1,6 +1,5 @@
 import csv
 import io
-from matplotlib import ticker
 import streamlit as st
 from datetime import datetime, timedelta
 import requests
