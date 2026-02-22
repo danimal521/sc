@@ -213,11 +213,13 @@ def render_zebra_table(headers, rows):
     thead = "".join(f"<th>{esc(h)}</th>" for h in headers)
 
     tbody_rows = []
-    for r in rows:        
+    for r in rows:   
+        html_dates = r.dates.replace(", ", "<br/>")     
         tds = (
             f"<td>{esc(r.symbol)}</td>"
             #f"<td style='text-align:center;'>{'✅' if r.has_dates else '—'}</td>"
-            f"<td>{esc(r.dates)}</td>"
+            #f"<td>{esc(r.dates)}</td>"
+            f"<td>{html_dates}</td>"
             f"<td style='text-align:center;'>{esc(r.score)}</td>"
         )
         
